@@ -1,66 +1,65 @@
 <template>
   <div>
-    <nuxt-link exact to="/" class="logo">sup</nuxt-link>
+    <nuxt-link exact to="/" class="logo">
+      <span class="logo-type">Typographie</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-2 -2 47 47" aria-labelledby="title" role="presentation">
+        <title id="title" lang="en">Typographie Logo</title>
+        <g>
+          <path d="M21,1A21,21,0,1,0,42,21,21,21,0,0,0,21,1ZM31,24,22,30H21L11,24h0L21,12h1L32,23h0Z" transform="translate(-1 -1)" fill="#808285"/>
+          <polygon points="20 28 20 13 12 23 20 28" fill="#808285" stroke="#231f20" stroke-miterlimit="10"/>
+          <polygon points="21 28 29 23 21 13 21 28" fill="#808285" stroke="#231f20" stroke-miterlimit="10"/>
+        </g>
+      </svg>
+    </nuxt-link>
     <nav>
-      <h3 class="title">
+      <div class="title">
         <nuxt-link exact to="/">home</nuxt-link>
         <nuxt-link to="/product">product</nuxt-link>
-        <nuxt-link to="/contact">contact</nuxt-link>
-        <span class="mid">____</span></h3>
-      </nav>
+      </div>
+    </nav>
 
-      <svg class="dot-nav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.2 128.4" aria-labelledby="title">
-        <title id="title">side navigation</title>
-        <g id="one">
-          <rect x="10.7" y="28.9" width="25.5" height="18.59" transform="translate(-9.7 -2.8) rotate(-0.4)" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="36.5" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75"/>
-        </g>
-        <g id="two">
-          <rect x="2.2" y="45.6" width="24.5" height="12.76" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="52.8" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75"/>
-        </g>
-        <g id="three">
-          <rect x="2.3" y="62.8" width="24.7" height="11.93" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="69" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75"/>
-        </g>
-        <g id="four">
-          <rect x="9.9" y="82.5" width="24.7" height="11.93" transform="translate(35 174) rotate(180)" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="85.2" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75"/>
-        </g>
-        <!-- <g id="five">
-          <rect x="9.9" y="98.9" width="24.5" height="12.76" transform="translate(34.9 207.5) rotate(180)" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="101.4" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75" opacity="0.48"/>
-        </g>
-        <g id="six">
-          <rect x="9.5" y="112.7" width="25.5" height="18.59" transform="translate(36 240.8) rotate(179.6)" fill="rgba(255, 255, 255, 0)"/>
-          <circle cx="13.6" cy="117.7" r="2.8" fill="rgba(255, 255, 255, 0)" stroke="#d1d3d4" stroke-miterlimit="10" stroke-width="0.75" opacity="0.48"/>
-        </g> -->
-    </svg>
-    <div class="bottom-side-anchor"><span class="mid">__________</span></div>
+    <div class="bottom-side-anchor"><span class="mid"></span></div>
   </div>
 </template>
 
 <style scoped>
   nav {
-    width: 60px;
-    background: black;
+    width: 50px;
+    background: #27aae1; /* Old browsers */
+    background: -moz-linear-gradient(top, #27aae1 0%, #ec008c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #27aae1 0%,#ec008c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #27aae1 0%,#ec008c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27aae1', endColorstr='#ec008c',GradientType=0 );
     height: 100vh;
     position: fixed;
     left: 0;
     z-index: 3000;
   }
 
-  .title a {
-    display: none;
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    font-size: 20px;
+    color: white;
+    z-index: 6000;
+    margin-left: 17px;
+    writing-mode: vertical-rl;
+  }
+
+  .title a, .title a:hover {
+    color: rgba(0, 0, 0, 0.8);
+    margin: 60px 0px;
   }
 
   .title a.nuxt-link-active {
-    display: inline-block;
-    color: white;
+    color: black;
   }
 
   .logo {
-    font-family: "montserrat", sans-serif;
     position: fixed;
     top: 10px; 
     right: 30px;
@@ -70,6 +69,7 @@
     transition: 0.2s opacity ease;
     z-index: 5000;
     cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .logo:hover {
@@ -77,15 +77,12 @@
     transition: 0.25s opacity ease;
   }
 
-  .title {
-    font-family: "Montserrat", sans-serif;
-    position: fixed;
-    transform: rotate(-90deg);
-    left: -32px;
-    font-size: 20px;
-    color: white;
-    z-index: 6000;
-    top: 60px;
+  .logo-type {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    vertical-align: super;
+    padding-right: 5px;
+    text-transform: uppercase;
   }
 
   .dot-nav {
@@ -98,14 +95,17 @@
 
   .bottom-side-anchor {
     position: absolute;
-    right: -20px;
-    bottom: 60px;
+    right: -50px;
+    bottom: 100px;
+    width: 200px;
+    height: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
     z-index: 5000;
-    color: black;
+    color: color;
     font-weight: bold;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
   }
 </style>
