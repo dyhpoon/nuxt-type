@@ -11,7 +11,7 @@
       <div class="font-text">
         <h1>Prata</h1>
         <p>Edison bulb wolf humblebrag, chambray skateboard tbh shoreditch four loko unicorn semiotics. Hammock banh mi chillwave, brunch before they sold out roof party fixie prism ramps blog. Ramps yr four dollar toast hammock street art swag lyft, meggings schlitz chicharrones offal vegan selvage normcore. Hot chicken distillery keytar, ennui adaptogen heirloom ramps viral kombucha. Cardigan 8-bit.</p>
-        <nuxt-link to="/rufina"><button class="next">Next up: Rufina</button></nuxt-link>
+        <nuxt-link to="/rufina"><button class="next slide">Next up: Rufina</button></nuxt-link>
       </div>
     </section>
 
