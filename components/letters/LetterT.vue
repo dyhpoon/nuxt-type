@@ -1,5 +1,5 @@
 <template>
-  <svg class="letter letter-t" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="409.5" height="515.9" viewBox="0 0 409.5 515.9">
+  <svg class="letter letter-t" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="409.5" height="515.9" viewBox="0 0 409.5 515.9" aria-labelledby="title">
   <defs>
     <radialGradient id="Super_Soft_Black_Vignette" data-name="Super Soft Black Vignette" cx="139.02" cy="169.93" r="54" gradientUnits="userSpaceOnUse">
       <stop offset="0.57" stop-color="#130c0e" stop-opacity="0"/>
@@ -11,7 +11,9 @@
     <radialGradient id="Super_Soft_Black_Vignette-3" cx="155.02" cy="416.92" r="27" xlink:href="#Super_Soft_Black_Vignette"/>
     <radialGradient id="Super_Soft_Black_Vignette-4" cx="258.56" cy="417.93" r="27" xlink:href="#Super_Soft_Black_Vignette"/>
   </defs>
-  <title>t</title>
+  <title id="title" lang="en">
+    Representative T Typography for Playfair
+  </title>
   <g>
     <g id="t">
       <path d="M77,174.3a612.1,612.1,0,0,0-3.7-64q41.5,1.5,141.1,1.5t140.4-1.5q-3.4,35.6-3.4,64,0,25.1,1.5,41H341.4q-3.9-38.8-9.9-57.5t-21-27.3q-15-8.7-46-8.7H237.4V406.2q0,20.8,3.9,30.4a22.8,22.8,0,0,0,14.2,13.3q10.3,3.7,32.5,4.4v10q-26.4-1.5-73.5-1.5-50.1,0-74,1.5v-10q22.2-.7,32.5-4.4a22.8,22.8,0,0,0,14.2-13.3q3.9-9.6,3.9-30.4V121.8H163.9q-31,0-46,8.7t-21,27.3q-6,18.7-9.9,57.5H75.5Q77,199.4,77,174.3Z" transform="translate(-8.1 -6.9)" fill="#fff"/>

@@ -2,21 +2,21 @@
   <div class="container index">
     <section>
 
-      <Mount2 />
+      <Mount3 />
 
       <div class="letter-contain">
-        <LetterT />
+        <LetterS />
       </div>
 
       <div class="font-text">
-        <h1>Bree Serif</h1>
+        <h1>Rufina</h1>
         <p>Edison bulb wolf humblebrag, chambray skateboard tbh shoreditch four loko unicorn semiotics. Hammock banh mi chillwave, brunch before they sold out roof party fixie prism ramps blog. Ramps yr four dollar toast hammock street art swag lyft, meggings schlitz chicharrones offal vegan selvage normcore. Hot chicken distillery keytar, ennui adaptogen heirloom ramps viral kombucha. Cardigan 8-bit.</p>
         <nuxt-link to="/"><button class="next">Next up: Playfair Serif</button></nuxt-link>
       </div>
     </section>
 
     <PhotoArea>
-      <img class="photo" src="~assets/photo-boat.jpg" width="100%"/>
+      <img class="photo" src="~assets/photo-river.jpg" width="100%"/>
     </PhotoArea>
 
   </div><!--container-->
@@ -24,8 +24,8 @@
 
 <script>
 import { TimelineMax, Sine, Circ } from 'gsap'
-import Mount2 from '~components/mountains/Mount2.vue'
-import LetterT from '~components/letters/LetterT.vue'
+import Mount3 from '~components/mountains/Mount3.vue'
+import LetterS from '~components/letters/LetterS.vue'
 import PhotoArea from '~components/PhotoArea.vue'
 
 export default {
@@ -33,7 +33,7 @@ export default {
     mode: 'out-in',
     css: false,
     enter (el, done) {
-      console.log('enter from index')
+      console.log('enter from rufina')
       let tl = new TimelineMax({ onComplete: done }),
           spt = new SplitText('h1', {type: 'chars' }), 
           chars = spt.chars;
@@ -51,13 +51,12 @@ export default {
         ease: Sine.easeOut
       }, 'start')
       tl.staggerFrom('.maplines g path', 0.8, {
-        rotation: 45,
-        opacity: 0.2,
-        scale: 0.5,
+        opacity: 0,
+        rotation: -40,
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
-      }, 0.003, 'start')
-      tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
+      }, -0.001, 'start')
+      tl.staggerFrom('#lines g line, #lines g path, #circles circle, #circles ellipse', 0.8, {
         scale: 0,
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
@@ -68,17 +67,17 @@ export default {
       }, 'start+=0.5')
       tl.staggerFrom(chars, 0.8, {
         z: -100,
-        rotationY: 180,
+        rotationX: 180,
         opacity: 0.5,
         ease: Sine.easeOut
-      }, 0.03, 'start')
+      }, 0.05, 'start')
       tl.staggerFrom('section.photo-area div', 1, {
         opacity: 0,
         ease: Sine.easeOut
       }, 0.25, 'start+=0.25')
     },
     leave (el, done) {
-      console.log('leave from index')
+      console.log('leave from rufina')
       let tl = new TimelineMax({ onComplete: done }),
           spt2 = new SplitText('h1', {type: 'chars' }), 
           chars2 = spt2.chars;
@@ -103,27 +102,28 @@ export default {
         transformOrigin: '50% 50%',
         ease: Sine.easeIn
       }, 0.003, 'leave')
-      tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
+      tl.staggerFrom('#lines g line, #lines g path, #circles circle, #circles ellipse', 1, {
         scale: 0,
         transformOrigin: '50% 50%',
         ease: Sine.easeIn
       }, 0.01, 'leave')
-      tl.from('#t', 1, {
+      tl.from('#s', 1, {
         opacity: 0,
         ease: Sine.easeInOut
       }, 'leave+=0.5')
-      tl.staggerTo(chars2, 0.3, {
+      tl.to('h1', 0.75, {
         opacity: 0,
         z: -100,
-        rotationY: 180,
+        rotationX: 180,
+        transformOrigin: '50% 50%',
         ease: Sine.easeIn
-      }, 0.005, 'leave')
+      }, 'leave')
       tl.timeScale(1.5)
     }
   },
   components: {
-    Mount2,
-    LetterT,
+    Mount3,
+    LetterS,
     PhotoArea
   }
 }
@@ -131,7 +131,7 @@ export default {
 
 <style scoped>
   h1 {
-    font-family: 'Bree Serif', serif;
+    font-family: 'Rufina', serif;
     font-size: 50px;
   }
 </style>

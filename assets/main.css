@@ -56,17 +56,17 @@ section:after {
 
 .font-text {
   width: 30%;
-  margin-top: 158px;
+  margin-top: 160px;
   position: relative;
   z-index: 3000;
 }
 
 .font-text p, .photo-text {
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 button.next {
-  padding: 13px 40px;
+  padding: 13px 40px 10px;
   background: rgb(40, 169, 224);
   border-radius: 1000px;
   cursor: pointer;
@@ -77,6 +77,11 @@ button.next {
   font-weight: bold;
   margin-top: 20px;
   outline: 0;
+}
+
+.letter {
+  width: 409.5;
+  height: 515.9;
 }
 
 .st0 {

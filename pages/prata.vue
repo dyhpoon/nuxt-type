@@ -5,18 +5,18 @@
       <Mount2 />
 
       <div class="letter-contain">
-        <LetterT />
+        <LetterR />
       </div>
 
       <div class="font-text">
         <h1>Prata</h1>
         <p>Edison bulb wolf humblebrag, chambray skateboard tbh shoreditch four loko unicorn semiotics. Hammock banh mi chillwave, brunch before they sold out roof party fixie prism ramps blog. Ramps yr four dollar toast hammock street art swag lyft, meggings schlitz chicharrones offal vegan selvage normcore. Hot chicken distillery keytar, ennui adaptogen heirloom ramps viral kombucha. Cardigan 8-bit.</p>
-        <nuxt-link to="/bree"><button class="next">Next up: Bree Serif</button></nuxt-link>
+        <nuxt-link to="/rufina"><button class="next">Next up: Rufina</button></nuxt-link>
       </div>
     </section>
 
     <PhotoArea>
-      <img class="photo" src="~assets/photo-boat.jpg" width="100%"/>
+      <img class="photo" src="~assets/photo-mount.jpg" width="100%"/>
     </PhotoArea>
 
   </div><!--container-->
@@ -25,7 +25,7 @@
 <script>
 import { TimelineMax, Sine, Circ } from 'gsap'
 import Mount2 from '~components/mountains/Mount2.vue'
-import LetterT from '~components/letters/LetterT.vue'
+import LetterR from '~components/letters/LetterR.vue'
 import PhotoArea from '~components/PhotoArea.vue'
 
 export default {
@@ -33,7 +33,7 @@ export default {
     mode: 'out-in',
     css: false,
     enter (el, done) {
-      console.log('enter from index')
+      console.log('enter from prata')
       let tl = new TimelineMax({ onComplete: done }),
           spt = new SplitText('h1', {type: 'chars' }), 
           chars = spt.chars;
@@ -57,12 +57,12 @@ export default {
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
       }, 0.003, 'start')
-      tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
+      tl.staggerFrom('#lines g line, #lines g path, #circles circle, #circles path', 0.8, {
         scale: 0,
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
       }, 0.01, 'start')
-      tl.from('#t', 1, {
+      tl.from('#r', 1, {
         opacity: 0,
         ease: Sine.easeInOut
       }, 'start+=0.5')
@@ -78,7 +78,7 @@ export default {
       }, 0.25, 'start+=0.25')
     },
     leave (el, done) {
-      console.log('leave from index')
+      console.log('leave from prata')
       let tl = new TimelineMax({ onComplete: done }),
           spt2 = new SplitText('h1', {type: 'chars' }), 
           chars2 = spt2.chars;
@@ -103,12 +103,13 @@ export default {
         transformOrigin: '50% 50%',
         ease: Sine.easeIn
       }, 0.003, 'leave')
-      tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
+      tl.staggerFrom('#lines g line, #lines g path, #circles circle, #circles path', 1, {
         scale: 0,
+        rotation: 180,
         transformOrigin: '50% 50%',
         ease: Sine.easeIn
       }, 0.01, 'leave')
-      tl.from('#t', 1, {
+      tl.from('#r', 1, {
         opacity: 0,
         ease: Sine.easeInOut
       }, 'leave+=0.5')
@@ -123,7 +124,7 @@ export default {
   },
   components: {
     Mount2,
-    LetterT,
+    LetterR,
     PhotoArea
   }
 }
