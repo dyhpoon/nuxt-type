@@ -17,7 +17,6 @@ module.exports = {
     extend(config, {dev, isClient}) {
       if (isClient) {
         config.entry.app = ["~/SplitText.min", config.entry.app];
-        //config.entry.app.unshift('~/SplitText.min', '~/DrawSVGPlugin.min') 
       }
     }
   }

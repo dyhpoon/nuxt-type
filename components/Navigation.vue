@@ -13,8 +13,8 @@
     </nuxt-link>
     <nav>
       <div class="title">
-        <nuxt-link exact to="/">home</nuxt-link>
-        <nuxt-link to="/product">product</nuxt-link>
+        <nuxt-link exact to="/">Playfair</nuxt-link>
+        <nuxt-link to="/bree">Bree Serif</nuxt-link>
       </div>
     </nav>
 

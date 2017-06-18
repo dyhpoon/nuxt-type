@@ -4,6 +4,8 @@ html, body {
   color: white;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
 a, a:visited {
@@ -11,12 +13,23 @@ a, a:visited {
   text-decoration: none;
 }
 
-section.container {
+.container {
   position: relative;
-  width: calc(100vw - 50px);
+  width: calc(100vw - 200px);
   margin-left: 50px;
-  display: flex;
   height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .mid {
@@ -29,4 +42,39 @@ section.container {
 .mount {
   width: 800px;
   height: 800px;
+  position: absolute;
+  right: -100px;
+  z-index: 1;
+}
+
+.letter-contain {
+  margin-top: 100px;
+  margin-right: 100px;
+  position: relative;
+  z-index: 3000;
+}
+
+.font-text {
+  width: 30%;
+  margin-top: 158px;
+  position: relative;
+  z-index: 3000;
+}
+
+.font-text p, .photo-text {
+  line-height: 1.5em;
+}
+
+button.next {
+  padding: 13px 40px;
+  background: rgb(40, 169, 224);
+  border-radius: 1000px;
+  cursor: pointer;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: 0;
 }

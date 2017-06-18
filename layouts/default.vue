@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img class="moon" src="~assets/FullMoon2010.png" />
     <Navigation />
     <nuxt/>
   </div>
@@ -14,3 +15,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.moon {
+  position: absolute;
+  right: 0;
+  top: 183px;
+  width: 150px;
+  z-index: 10;
+}
+</style>
