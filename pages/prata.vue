@@ -1,16 +1,17 @@
 <template>
   <div class="container index">
     <section>
-      <Mount1 />
+
+      <Mount2 />
 
       <div class="letter-contain">
         <LetterT />
       </div>
 
       <div class="font-text">
-        <h1>Playfair Serif</h1>
+        <h1>Prata</h1>
         <p>Edison bulb wolf humblebrag, chambray skateboard tbh shoreditch four loko unicorn semiotics. Hammock banh mi chillwave, brunch before they sold out roof party fixie prism ramps blog. Ramps yr four dollar toast hammock street art swag lyft, meggings schlitz chicharrones offal vegan selvage normcore. Hot chicken distillery keytar, ennui adaptogen heirloom ramps viral kombucha. Cardigan 8-bit.</p>
-        <nuxt-link to="/prata"><button class="next">Next up: Prata</button></nuxt-link>
+        <nuxt-link to="/bree"><button class="next">Next up: Bree Serif</button></nuxt-link>
       </div>
     </section>
 
@@ -23,8 +24,8 @@
 
 <script>
 import { TimelineMax, Sine, Circ } from 'gsap'
+import Mount2 from '~components/mountains/Mount2.vue'
 import LetterT from '~components/letters/LetterT.vue'
-import Mount1 from '~components/mountains/Mount1.vue'
 import PhotoArea from '~components/PhotoArea.vue'
 
 export default {
@@ -55,7 +56,7 @@ export default {
         scale: 0.5,
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
-      }, -0.003, 'start')
+      }, 0.003, 'start')
       tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
         scale: 0,
         transformOrigin: '50% 50%',
@@ -78,9 +79,11 @@ export default {
     },
     leave (el, done) {
       console.log('leave from index')
-      let tl = new TimelineMax({ onComplete: done });
+      let tl = new TimelineMax({ onComplete: done }),
+          spt2 = new SplitText('h1', {type: 'chars' }), 
+          chars2 = spt2.chars;
 
-      TweenMax.set('h1', {
+      TweenMax.set(chars2, {
         transformPerspective: 600,
         perspective: 300,
         transformStyle: 'preserve-3d'
@@ -109,28 +112,26 @@ export default {
         opacity: 0,
         ease: Sine.easeInOut
       }, 'leave+=0.5')
-      tl.to('h1', 0.75, {
+      tl.staggerTo(chars2, 0.3, {
         opacity: 0,
         z: -100,
         rotationY: 180,
-        scale: 0.5,
-        transformOrigin: '50% 50%',
         ease: Sine.easeIn
-      }, 'leave')
+      }, 0.005, 'leave')
       tl.timeScale(1.5)
     }
   },
   components: {
-    Mount1,
-    PhotoArea,
-    LetterT
+    Mount2,
+    LetterT,
+    PhotoArea
   }
 }
 </script>
 
 <style scoped>
   h1 {
-    font-family: 'Playfair', serif;
+    font-family: 'Prata', serif;
     font-size: 50px;
   }
 </style>

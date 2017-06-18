@@ -13,8 +13,9 @@
     </nuxt-link>
     <nav>
       <div class="title">
-        <nuxt-link exact to="/">Playfair</nuxt-link>
+        <nuxt-link to="/prata">Prata</nuxt-link>
         <nuxt-link to="/bree">Bree Serif</nuxt-link>
+        <nuxt-link exact to="/">Playfair</nuxt-link>
       </div>
     </nav>
 
