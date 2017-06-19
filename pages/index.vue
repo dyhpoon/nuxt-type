@@ -35,7 +35,8 @@ export default {
       console.log('enter from index')
       let tl = new TimelineMax({ onComplete: done }),
           spt = new SplitText('h1', {type: 'chars' }), 
-          chars = spt.chars;
+          chars = spt.chars,
+          isChrome = !!window.chrome && !!window.chrome.webstore;
 
       TweenMax.set(chars, {
         transformPerspective: 600,
@@ -49,13 +50,15 @@ export default {
         transformOrigin: '50% 50%',
         ease: Sine.easeOut
       }, 'start')
-      tl.staggerFrom('.maplines g path', 0.8, {
-        rotation: 45,
-        opacity: 0.2,
-        scale: 0.5,
-        transformOrigin: '50% 50%',
-        ease: Sine.easeOut
-      }, -0.003, 'start')
+      if (isChrome) {
+        tl.staggerFrom('.maplines g path', 0.8, {
+          rotation: 45,
+          opacity: 0.2,
+          scale: 0.5,
+          transformOrigin: '50% 50%',
+          ease: Sine.easeOut
+        }, -0.003, 'start')
+      }
       tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
         scale: 0,
         transformOrigin: '50% 50%',
