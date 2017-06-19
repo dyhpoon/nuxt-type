@@ -51,6 +51,15 @@
     writing-mode: vertical-rl;
   }
 
+  @media screen and (max-width: 700px) {
+    nav {
+      width: 40px; 
+    }
+    .title {
+      margin-left: 13px;
+    }
+  }
+
   .title a, .title a:hover {
     color: rgba(0, 0, 0, 0.8);
     margin: 60px 0px;

@@ -1,5 +1,5 @@
 <template>
-  <svg class="letter letter-t" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="409.5" height="515.9" viewBox="0 0 409.54 496.58" aria-labelledby="title">
+  <svg class="letter letter-t" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.54 496.58" aria-labelledby="title">
   <defs>
     <radialGradient id="a" data-name="Super Soft Black Vignette" cx="200.48" cy="200.35" r="79.57" gradientUnits="userSpaceOnUse">
       <stop offset=".57" stop-color="#130c0e" stop-opacity="0"/>
@@ -82,3 +82,6 @@
 </svg>
 
 </template>
+
+<style>
+</style>
