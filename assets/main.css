@@ -136,13 +136,13 @@ button.next {
 
 /* responsive styles */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 801px) {
   .letter {
     width: 409px;
     height: 516px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .container {
     width: 90vw;
   }
@@ -164,10 +164,10 @@ button.next {
     margin-right: 30px;
   }
   .photo-contain {
-    margin-right: 10px;
-    width: 35%;
+    margin-right: 20px !important;
+    width: 30% !important;
   }
   .photo-text {
-    width: 53%;
+    width: 53% !important;
   }
 }

@@ -51,7 +51,7 @@
     writing-mode: vertical-rl;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     nav {
       width: 40px; 
     }
