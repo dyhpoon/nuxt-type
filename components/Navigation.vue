@@ -67,6 +67,7 @@
 
   .title a.nuxt-link-active {
     color: black;
+    transition: 0.2s color ease;
   }
 
   .logo {
@@ -117,5 +118,10 @@
     color: color;
     font-weight: bold;
     font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .nuxt-link-active {
+    color: white !important;
+    transition: 0.2s color ease;
   }
 </style>

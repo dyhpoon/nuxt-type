@@ -25,5 +25,9 @@ export default {
   z-index: 10;
 }
 
-
+@media screen and (max-width: 700px) {
+  .moon {
+    z-index: 0;
+  }
+}
 </style>
