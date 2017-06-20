@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-test",
+  "name": "nuxt-type",
   "version": "1.0.1",
-  "description": "Nuxt.js project",
-  "author": "sdrasner <sarah.drasner@gmail.com>",
+  "description": "Creating a fake typography site to show animations in Nuxt routing",
+  "author": "sdras <sarah.drasner@gmail.com>",
   "private": true,
   "dependencies": {
     "gsap": "^1.19.1",
@@ -12,7 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt dev",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
