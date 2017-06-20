@@ -9,7 +9,6 @@
     "nuxt": "1.0.0-alpha.4"
   },
   "scripts": {
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
