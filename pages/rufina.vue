@@ -155,4 +155,9 @@ export default {
     font-family: 'Rufina', serif;
     font-size: 50px;
   }
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 45px;
+    }
+  }
 </style>

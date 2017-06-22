@@ -187,6 +187,6 @@
 
 <style scoped>
   .maplines path {
-    opacity: 0.1;
+    opacity: 0.17;
   }
 </style>
