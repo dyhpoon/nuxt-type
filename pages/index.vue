@@ -58,6 +58,14 @@ export default {
           transformOrigin: '50% 50%',
           ease: Sine.easeOut
         }, -0.003, 'start')
+      } else {
+        tl.from('.mount', 0.8, {
+          rotation: 45,
+          opacity: 0.2,
+          scale: 0.5,
+          transformOrigin: '50% 50%',
+          ease: Sine.easeOut
+        }, 'start')
       }
       tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
         scale: 0,
@@ -81,7 +89,8 @@ export default {
     },
     leave (el, done) {
       console.log('leave from index')
-      let tl = new TimelineMax({ onComplete: done });
+      let tl = new TimelineMax({ onComplete: done }),
+      isChrome = !!window.chrome && !!window.chrome.webstore;
 
       TweenMax.set('h1', {
         transformPerspective: 600,
@@ -96,13 +105,23 @@ export default {
         transformOrigin: '50% 50%',
         ease: Sine.easeIn
       }, 'leave')
-      tl.staggerTo('.maplines g path', 0.8, {
-        rotation: -45,
-        opacity: 0.2,
-        scale: 0.5,
-        transformOrigin: '50% 50%',
-        ease: Sine.easeIn
-      }, 0.003, 'leave')
+      if (isChrome) {
+        tl.staggerTo('.maplines g path', 0.8, {
+          rotation: -45,
+          opacity: 0.2,
+          scale: 0.5,
+          transformOrigin: '50% 50%',
+          ease: Sine.easeIn
+        }, 0.003, 'leave')
+      } else {
+        tl.to('.mount', 0.8, {
+          rotation: -45,
+          opacity: 0.2,
+          scale: 0.5,
+          transformOrigin: '50% 50%',
+          ease: Sine.easeIn
+        }, 'leave')
+      }
       tl.staggerFrom('#lines g line, #lines g path, #circles circle', 0.8, {
         scale: 0,
         transformOrigin: '50% 50%',
