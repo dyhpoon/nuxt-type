@@ -14,7 +14,7 @@ module.exports = {
   loading: false,
   css: ['assets/normalize.css', 'assets/main.css'],
   build: {
-    extend(config, {dev, isClient}) {
+    extend(config, {isClient, dev}) {
       if (isClient) {
         config.entry.app = ["~/SplitText.min", config.entry.app];
       }
