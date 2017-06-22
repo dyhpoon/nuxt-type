@@ -153,12 +153,15 @@ export default {
 </script>
 
 <style scoped>
-  h1 {
-    font-family: 'Prata', serif;
-    font-size: 50px;
+  @media screen and (min-width: 801px) {
+    h1 {
+      font-family: 'Prata', serif;
+      font-size: 50px;
+    }
   }
   @media screen and (max-width: 800px) {
     h1 {
+      font-family: 'Prata', serif;
       font-size: 45px;
     }
   }
